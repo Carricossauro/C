@@ -39,7 +39,7 @@ int main() {
         default:
             return 0;
     }
-    printf("%d", resultado);
+    printf("Resultado: %d\n", resultado);
     return 0;
 }
 int ex1_alt() {
