@@ -45,7 +45,7 @@ int soma(int dif) {
     int x, y, res;
 
     switch (dif) {
-        case 1:
+        case 2:
             while (1) {
                 x = 1 + rand() % 100;
                 y = 1 + rand() % 100;
@@ -61,7 +61,7 @@ int soma(int dif) {
                     } else errado();
                 }
             }
-        case 2:
+        case 3:
             while (1) {
                 x = 1 + rand() % 1000;
                 y = 1 + rand() % 1000;
@@ -101,7 +101,7 @@ int sub(int dif) {
     int x, y, res;
 
     switch (dif) {
-        case 1:
+        case 2:
             while (1) {
                 x = 1 + rand() % 100;
                 y = 1 + rand() % 100;
@@ -117,7 +117,7 @@ int sub(int dif) {
                     } else errado();
                 }
             }
-        case 2:
+        case 3:
             while (1) {
                 x = 1 + rand() % 1000;
                 y = 1 + rand() % 1000;
@@ -157,7 +157,7 @@ int divi(int dif) {
     int x, y, res;
 
     switch (dif) {
-        case 1:
+        case 2:
             while (1) {
                 float re, resto;
                 x = 1 + rand() % 100;
@@ -184,7 +184,7 @@ int divi(int dif) {
                     } else errado();
                 }
             }
-        case 2:
+        case 3:
             while (1) {
                 float re, resto;
                 x = 1 + rand() % 1000;
@@ -246,7 +246,7 @@ int mult(int dif) {
     int x, y, res;
 
     switch (dif) {
-        case 1:
+        case 2:
             while (1) {
                 x = 1 + rand() % 1000;
                 y = 1 + rand() % 10;
@@ -262,7 +262,7 @@ int mult(int dif) {
                     } else errado();
                 }
             }
-        case 2:
+        case 3:
             while (1) {
                 x = 1 + rand() % 100;
                 y = 1 + rand() % 10;
@@ -303,16 +303,16 @@ void certo() {
 
     switch (n) {
         case 0:
-            printf("Parabéns! Acertaste!\n");
-            break;
-        case 1:
             printf("Acertaste.\n");
             break;
-        case 2:
+        case 1:
             printf("Bem jogado!\n");
             break;
-        case 3:
+        case 2:
             printf("Contas bem feitas!\n");
+            break;
+        case 3:
+            printf("Parabéns! Acertaste!\n");
             break;
         case 4:
             printf("Está certo. Muito bem!\n");
