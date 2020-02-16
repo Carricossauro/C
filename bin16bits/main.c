@@ -2,7 +2,7 @@
 
 int main() {
     printf("Número: ");
-    int a, i = 0, bin[] = {0,0,0,0,0,0,0,0,0,0,0,0};
+    int a, i = 0, bin[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     scanf("%d", &a);
     while (a >= 2) {
         bin[i] = (a % 2);
@@ -10,7 +10,7 @@ int main() {
         i++;
     }
     bin[i] = (a % 2);
-    for (i = 11; i >= 0; i--) {
+    for (i = 15; i >= 0; i--) {
         printf("%d", bin[i]);
     }
     putchar('\n');
