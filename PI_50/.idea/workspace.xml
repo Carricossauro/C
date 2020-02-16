@@ -12,17 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d75a1f4f-1620-4d16-99bb-6298b7f37f5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../LAFT2_T3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LAFT2_T3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../LAFT2_T3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LAFT2_T3/cmake-build-debug/CMakeFiles/LAFT2_T3.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../LAFT2_T3/cmake-build-debug/CMakeFiles/LAFT2_T3.dir/main.c.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LAFT2_T3/cmake-build-debug/LAFT2_T3" beforeDir="false" afterPath="$PROJECT_DIR$/../LAFT2_T3/cmake-build-debug/LAFT2_T3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LAFT2_T3/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../LAFT2_T3/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../LAFT2_T3/operaçoes" beforeDir="false" afterPath="$PROJECT_DIR$/../LAFT2_T3/operaçoes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PI_50.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PI_50.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/defs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAFT2_T3" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunManager">
@@ -73,6 +67,7 @@
       <workItem from="1581187704000" duration="2634000" />
       <workItem from="1581532667108" duration="26000" />
       <workItem from="1581861975248" duration="3071000" />
+      <workItem from="1581865281315" duration="10000" />
     </task>
     <servers />
   </component>
@@ -84,10 +79,11 @@
       <screen x="59" y="27" width="1861" height="1053" />
     </state>
     <state x="584" y="215" width="800" height="684" key="#Inspections/59.27.1861.1053@59.27.1861.1053" timestamp="1581085250306" />
-    <state x="735" y="280" width="426" height="493" key="FileChooserDialogImpl" timestamp="1581532691123">
+    <state x="735" y="280" width="426" height="493" key="FileChooserDialogImpl" timestamp="1581865289935">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="735" y="280" key="FileChooserDialogImpl/0.0.1920.1043/1920.0.1920.1080@0.0.1920.1043" timestamp="1581532691123" />
+    <state x="735" y="280" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1581865289935" />
     <state x="771" y="310" width="426" height="493" key="FileChooserDialogImpl/59.27.1861.1053@59.27.1861.1053" timestamp="1581163204304" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1581865046811">
       <screen x="0" y="0" width="1920" height="1043" />
@@ -129,6 +125,10 @@
       <screen x="59" y="27" width="1861" height="1053" />
     </state>
     <state x="856" y="178" width="1022" height="737" key="SettingsEditor/59.27.1861.1053@59.27.1861.1053" timestamp="1581088682681" />
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1581865281195">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1581865281195" />
     <state x="652" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1581088988692">
       <screen x="59" y="27" width="1861" height="1053" />
     </state>
