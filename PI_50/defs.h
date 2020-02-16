@@ -7,7 +7,10 @@
 
 #endif //PI_50_DEFS_H
 
-void ex1();
-void ex1_alt();
-void ex2();
-void ex3();
+int ex1();
+int ex1_alt();
+int ex2();
+int ex3();
+int ex4(unsigned int a);
+int ex5(unsigned int a);
+int ex6(unsigned int a);
