@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/LAFT1_T3.dir/main.c.o  -o LAFT1_T3 -lm 

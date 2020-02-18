@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/bin8bits.dir/main.c.o  -o bin8bits 

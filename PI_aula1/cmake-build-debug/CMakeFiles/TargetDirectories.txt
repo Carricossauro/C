@@ -1,3 +1,0 @@
-/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_aula1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_aula1/cmake-build-debug/CMakeFiles/LAFT1.dir
-/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_aula1/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/LAFT2_T1.dir/principal.c.o CMakeFiles/LAFT2_T1.dir/indicadores.c.o  -o LAFT2_T1 
