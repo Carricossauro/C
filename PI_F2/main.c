@@ -79,14 +79,20 @@ int ex2(int n, int m) {
 
 int mdc(int a, int b) {
     int maior = 1;
+
     if (a > b) {
         a = a + b;
         b = a - b;
         a = a - b;
     }
+
     for (int i = a; i >= 1 ; i--) {
-        if (a % i == 0 && b % i == 0 && i > maior) maior = i;
+        if (a % i == 0 && b % i == 0) {
+            maior = i;
+            break;
+        }
     }
+
     return maior;
 }
 
@@ -94,8 +100,8 @@ int mdc2(int a, int b) {
     while (1) {
         if (b == 0) return a;
         else if (a == 0) return b;
-        else if (a > b) a = a % b;
-        else if (b > a) b = b % a;
+        else if (a >= b) a -= b;
+        else if (b > a) b -= a;
     }
 }
 
