@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="LAFT2_T3" targetName="LAFT2_T3" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37b8a6ba-60a8-4ea9-859b-56bceac018e5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1XkeR0A5lTBLrqjC27tul2O8LyE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="LAFT2_T3" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="LAFT2_T3" TARGET_NAME="LAFT2_T3" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="LAFT2_T3" RUN_TARGET_NAME="LAFT2_T3">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37b8a6ba-60a8-4ea9-859b-56bceac018e5" name="Default Changelist" comment="" />
+      <created>1581594507661</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581594507661</updated>
+      <workItem from="1581594509291" duration="1936000" />
+      <workItem from="1581794585757" duration="793000" />
+      <workItem from="1581799445691" duration="5069000" />
+      <workItem from="1581854914301" duration="336000" />
+      <workItem from="1581861543291" duration="425000" />
+      <workItem from="1581865293216" duration="8000" />
+      <workItem from="1581865933926" duration="12000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="742" y="277" width="426" height="481" key="FileChooserDialogImpl" timestamp="1581861971645">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="742" y="277" width="426" height="481" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1581861971645" />
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1581855252265">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state width="1876" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1043@0.0.1920.1043" timestamp="1581855252265" />
+    <state width="1876" height="277" key="GridCell.Tab.0.center" timestamp="1581855252264">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state width="1876" height="277" key="GridCell.Tab.0.center/0.0.1920.1043@0.0.1920.1043" timestamp="1581855252264" />
+    <state width="1876" height="277" key="GridCell.Tab.0.left" timestamp="1581855252263">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state width="1876" height="277" key="GridCell.Tab.0.left/0.0.1920.1043@0.0.1920.1043" timestamp="1581855252263" />
+    <state width="1876" height="277" key="GridCell.Tab.0.right" timestamp="1581855252264">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state width="1876" height="277" key="GridCell.Tab.0.right/0.0.1920.1043@0.0.1920.1043" timestamp="1581855252264" />
+    <state x="463" y="155" key="SettingsEditor" timestamp="1581802288219">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="463" y="155" key="SettingsEditor/0.0.1920.1043@0.0.1920.1043" timestamp="1581802288219" />
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1581865934301">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1581865934301" />
+    <state x="703" y="166" width="503" height="704" key="refactoring.ChangeSignatureDialog" timestamp="1581803228062">
+      <screen x="0" y="0" width="1920" height="1043" />
+    </state>
+    <state x="703" y="166" width="503" height="704" key="refactoring.ChangeSignatureDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1581803228062" />
+  </component>
+</project>

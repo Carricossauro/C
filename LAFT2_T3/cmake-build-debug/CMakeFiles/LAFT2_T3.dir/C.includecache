@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/LAFT2_T3/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+

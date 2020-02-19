@@ -1,0 +1,3 @@
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/bin12bits/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/bin12bits/cmake-build-debug/CMakeFiles/bin12bits.dir
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/bin12bits/cmake-build-debug/CMakeFiles/edit_cache.dir

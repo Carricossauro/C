@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/PI_F2.dir/main.c.o  -o PI_F2 
