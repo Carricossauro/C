@@ -60,20 +60,24 @@ int main() {
 
 float multInt(int n, float m) {
     float r = 0;
+
     while (n > 0) {
         r+=m;
         n--;
     }
+
     return r;
 }
 
 int ex2(int n, int m) {
     int soma = 0;
+
     while (n >= 1) {
         if (n % 2 != 0) soma+=m;
         n/=2;
         m*=2;
     }
+
     return soma;
 }
 
@@ -97,12 +101,11 @@ int mdc(int a, int b) {
 }
 
 int mdc2(int a, int b) {
-    while (1) {
-        if (b == 0) return a;
-        else if (a == 0) return b;
-        else if (a >= b) a -= b;
-        else if (b > a) b -= a;
+    while (a != 0 && b != 0) {
+        if (a > b) a -= b;
+        else b -= a;
     }
+    return (a + b);
 }
 
 int fib(int n) {
