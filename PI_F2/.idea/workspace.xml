@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5b24f85-1945-4327-874b-2326ff7347de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PI_F2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PI_F2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1581781053439</updated>
       <workItem from="1581781054968" duration="5450000" />
-      <workItem from="1582107144867" duration="5115000" />
+      <workItem from="1582107144867" duration="5229000" />
     </task>
     <servers />
   </component>

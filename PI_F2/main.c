@@ -55,6 +55,7 @@ int main() {
             printf("\nEscolhe um exercício que esteja feito...");
             break;
     }
+    putchar('\n');
     return 0;
 }
 
