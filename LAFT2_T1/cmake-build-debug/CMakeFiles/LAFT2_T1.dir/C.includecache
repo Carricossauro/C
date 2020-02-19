@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/LAFT2_T1/indicadores.h
+
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/LAFT2_T1/principal.c
+stdio.h
+-
+assert.h
+-
+indicadores.h
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/LAFT2_T1/indicadores.h
+

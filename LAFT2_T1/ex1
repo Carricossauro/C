@@ -1,0 +1,5 @@
+Ao mudar o nome do ficheiro principal:
+add_executable(LAFT2_T1 main.c) --> add_executable(LAFT2_T1 principal.c)
+
+Ao adicionar os outros ficheiros:
+add_executable(LAFT2_T1 principal.c) -- > add_executable(LAFT2_T1 principal.c indicadores.h indicadores.c)
