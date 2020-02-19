@@ -109,14 +109,13 @@ int mdc2(int a, int b) {
 }
 
 int fib(int n) {
-    if (n <= 2) return 1;
+    if (n < 2) return 1;
     else return (fib(n - 1) + fib(n - 2));
 }
 
 int fib2(int n) {
     int c, a = 1, b = 1;
-    if (n == 0) return a;
-    for (int i = 2; i < n; i++) {
+    for (int i = 2; i <= n; i++) {
         c = a;
         a = b;
         b += c;
