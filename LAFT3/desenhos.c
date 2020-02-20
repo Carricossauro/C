@@ -17,6 +17,7 @@ void imprime_losango(int num_linhas) {
         imprimeLinha(linha++, num_linhas);
         putchar('\n');
     }
+    linha--;
     for (; i > 0; i--) {
         imprimeLinha(--linha, num_linhas);
         putchar('\n');
