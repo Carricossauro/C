@@ -4,35 +4,32 @@
 
 void certo();
 void errado();
-int soma(int dif);
-int sub(int dif);
-int divi(int dif);
-int mult(int dif);
+int soma();
+int sub();
+int divi();
+int mult();
+void rando(int *x, int *y, int d);
 
 int main() {
     while (1) {
-        int d;
         char j;
 
-        printf("Escolha a operçação aritmética: ");
+        printf("Escolha a operação aritmética: ");
         scanf(" %c", &j);
 
-        printf("Escolha a dificuldade: ");
-        scanf(" %d", &d);
-
-        if (d == 'x' || j == 'x') return 0;
+        if (j == 'x') return 0;
         switch (j) {
             case '+':
-                soma(d);
+                soma();
                 break;
             case '-':
-                sub(d);
+                sub();
                 break;
             case '/':
-                divi(d);
+                divi();
                 break;
             case '*':
-                mult(d);
+                mult();
                 break;
             default:
                 printf("Operação Inválida!\n");
@@ -40,261 +37,97 @@ int main() {
     }
 }
 
-int soma(int dif) {
-    srand(time(NULL));
-    int x, y, res;
+int soma() {
+    int x, y, res, dif;
+    printf("Escolha a dificuldade: ");
+    scanf(" %d", &dif);
 
-    switch (dif) {
-        case 2:
-            while (1) {
-                x = 1 + rand() % 100;
-                y = 1 + rand() % 100;
+    while (1) {
+        rando(&x, &y, dif);
 
-                while (1) {
-                    printf("Quanto é %d + %d? ", x, y);
-                    scanf("%d", &res);
+        while (1) {
+            printf("Quanto é %d + %d? ", x, y);
+            scanf("%d", &res);
 
-                    if (res == 12345) return 0;
-                    if (res == (x + y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        case 3:
-            while (1) {
-                x = 1 + rand() % 1000;
-                y = 1 + rand() % 1000;
-
-                while (1) {
-                    printf("Quanto é %d + %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x + y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        default:
-            while (1) {
-                x = 1 + rand() % 10;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d + %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x + y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
+            if (res == 12345) return 0;
+            if (res == (x + y)) {
+                certo();
+                break;
+            } else errado();
+        }
     }
 }
 
-int sub(int dif) {
-    srand(time(NULL));
-    int x, y, res;
+int sub() {
+    int x, y, res, dif;
+    printf("Escolha a dificuldade: ");
+    scanf(" %d", &dif);
 
-    switch (dif) {
-        case 2:
-            while (1) {
-                x = 1 + rand() % 100;
-                y = 1 + rand() % 100;
+    while (1) {
+        rando(&x, &y, dif);
 
-                while (1) {
-                    printf("Quanto é %d - %d? ", x, y);
-                    scanf("%d", &res);
+        while (1) {
+            printf("Quanto é %d - %d? ", x, y);
+            scanf("%d", &res);
 
-                    if (res == 12345) return 0;
-                    if (res == (x - y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        case 3:
-            while (1) {
-                x = 1 + rand() % 1000;
-                y = 1 + rand() % 1000;
-
-                while (1) {
-                    printf("Quanto é %d - %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x - y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        default:
-            while (1) {
-                x = 1 + rand() % 10;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d - %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x - y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
+            if (res == 12345) return 0;
+            if (res == (x - y)) {
+                certo();
+                break;
+            } else errado();
+        }
     }
 }
 
-int divi(int dif) {
-    srand(time(NULL));
-    int x, y, res;
+int divi() {
+    int x, y, dif;
+    float re, resto;
+    printf("Escolha a dificuldade: ");
+    scanf(" %d", &dif);
 
-    switch (dif) {
-        case 2:
-            while (1) {
-                float re, resto;
-                x = 1 + rand() % 100;
-                y = 1 + rand() % 10;
+    while (1) {
+        rando(&x, &y, dif);
 
+        while (1) {
+            printf("Quanto é %d / %d? ", x, y);
+            scanf("%f", &re);
+
+            if (re == 12345) return 0;
+            if (re == (x / y)) {
+                certo();
                 while (1) {
-                    printf("Quanto é %d / %d? ", x, y);
-                    scanf("%f", &re);
+                    printf("Resto: ");
+                    scanf("%f", &resto);
 
-                    if (re == 12345) return 0;
-                    if (re == (x / y)) {
+                    if (resto == 12345) return 0;
+                    if (resto == (x % y)) {
                         certo();
-                        while (1) {
-                            printf("Resto: ");
-                            scanf("%f", &resto);
-
-                            if (resto == 12345) return 0;
-                            if (resto == (x % y)) {
-                                certo();
-                                break;
-                            } else errado();
-                        }
                         break;
                     } else errado();
                 }
-            }
-        case 3:
-            while (1) {
-                float re, resto;
-                x = 1 + rand() % 1000;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d / %d? ", x, y);
-                    scanf("%f", &re);
-
-                    if (re == 12345) return 0;
-                    if (re == (x / y)) {
-                        certo();
-                        while (1) {
-                            printf("Resto: ");
-                            scanf("%f", &resto);
-
-                            if (resto == 12345) return 0;
-                            if (resto == (x % y)) {
-                                certo();
-                                break;
-                            } else errado();
-                        }
-                        break;
-                    } else errado();
-                }
-            }
-        default:
-            while (1) {
-                float re, resto;
-                x = 1 + rand() % 10;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d / %d? ", x, y);
-                    scanf("%f", &re);
-
-                    if (re == 12345) return 0;
-                    if (re == (x / y)) {
-                        certo();
-                        while (1) {
-                            printf("Resto: ");
-                            scanf("%f", &resto);
-
-                            if (resto == 12345) return 0;
-                            if (resto == (x % y)) {
-                                certo();
-                                break;
-                            } else errado();
-                        }
-                        break;
-                    } else errado();
-                }
-            }
-    }
+                break;
+            } else errado();
+        }}
 }
 
-int mult(int dif) {
-    srand(time(NULL));
-    int x, y, res;
+int mult() {
+    int x, y, res, dif;
+    printf("Escolha a dificuldade: ");
+    scanf(" %d", &dif);
 
-    switch (dif) {
-        case 2:
-            while (1) {
-                x = 1 + rand() % 1000;
-                y = 1 + rand() % 10;
+    while (1) {
+        rando(&x, &y, dif);
 
-                while (1) {
-                    printf("Quanto é %d * %d? ", x, y);
-                    scanf("%d", &res);
+        while (1) {
+            printf("Quanto é %d * %d? ", x, y);
+            scanf("%d", &res);
 
-                    if (res == 12345) return 0;
-                    if (res == (x * y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        case 3:
-            while (1) {
-                x = 1 + rand() % 100;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d * %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x * y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-        default:
-            while (1) {
-                x = 1 + rand() % 10;
-                y = 1 + rand() % 10;
-
-                while (1) {
-                    printf("Quanto é %d * %d? ", x, y);
-                    scanf("%d", &res);
-
-                    if (res == 12345) return 0;
-                    if (res == (x * y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-            }
-    }
+            if (res == 12345) return 0;
+            if (res == (x * y)) {
+                certo();
+                break;
+            } else errado();
+        }}
 }
 
 void certo() {
@@ -343,6 +176,25 @@ void errado() {
             printf("Não desistas! Tenta outra vez.\n");
             break;
         default:
+            break;
+    }
+}
+
+void rando(int *x, int *y, int d) {
+    srand(time(NULL));
+
+    switch (d) {
+        case 1:
+            *x = 1 + rand() % 100;
+            *y = 1 + rand() % 100;
+            break;
+        case 2:
+            *x = 1 + rand() % 1000;
+            *y = 1 + rand() % 1000;
+            break;
+        default:
+            *x = 1 + rand() % 10;
+            *y = 1 + rand() % 10;
             break;
     }
 }
