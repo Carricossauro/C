@@ -4,10 +4,8 @@
 
 void certo();
 void errado();
-int soma();
-int sub();
-int divi();
-int mult();
+void op(char o);
+int resultado(int x, int y, char o);
 void rando(int *x, int *y, int d);
 
 int main() {
@@ -17,117 +15,8 @@ int main() {
         printf("Escolha a operação aritmética: ");
         scanf(" %c", &j);
 
-        if (j == 'x') return 0;
-        switch (j) {
-            case '+':
-                soma();
-                break;
-            case '-':
-                sub();
-                break;
-            case '/':
-                divi();
-                break;
-            case '*':
-                mult();
-                break;
-            default:
-                printf("Operação Inválida!\n");
-        }
+        op(j);
     }
-}
-
-int soma() {
-    int x, y, res, dif;
-    printf("Escolha a dificuldade: ");
-    scanf(" %d", &dif);
-
-    while (1) {
-        rando(&x, &y, dif);
-
-        while (1) {
-            printf("Quanto é %d + %d? ", x, y);
-            scanf("%d", &res);
-
-            if (res == 12345) return 0;
-            if (res == (x + y)) {
-                certo();
-                break;
-            } else errado();
-        }
-    }
-}
-
-int sub() {
-    int x, y, res, dif;
-    printf("Escolha a dificuldade: ");
-    scanf(" %d", &dif);
-
-    while (1) {
-        rando(&x, &y, dif);
-
-        while (1) {
-            printf("Quanto é %d - %d? ", x, y);
-            scanf("%d", &res);
-
-            if (res == 12345) return 0;
-            if (res == (x - y)) {
-                certo();
-                break;
-            } else errado();
-        }
-    }
-}
-
-int divi() {
-    int x, y, dif;
-    float re, resto;
-    printf("Escolha a dificuldade: ");
-    scanf(" %d", &dif);
-
-    while (1) {
-        rando(&x, &y, dif);
-
-        while (1) {
-            printf("Quanto é %d / %d? ", x, y);
-            scanf("%f", &re);
-
-            if (re == 12345) return 0;
-            if (re == (x / y)) {
-                certo();
-                while (1) {
-                    printf("Resto: ");
-                    scanf("%f", &resto);
-
-                    if (resto == 12345) return 0;
-                    if (resto == (x % y)) {
-                        certo();
-                        break;
-                    } else errado();
-                }
-                break;
-            } else errado();
-        }}
-}
-
-int mult() {
-    int x, y, res, dif;
-    printf("Escolha a dificuldade: ");
-    scanf(" %d", &dif);
-
-    while (1) {
-        rando(&x, &y, dif);
-
-        while (1) {
-            printf("Quanto é %d * %d? ", x, y);
-            scanf("%d", &res);
-
-            if (res == 12345) return 0;
-            if (res == (x * y)) {
-                certo();
-                break;
-            } else errado();
-        }}
 }
 
 void certo() {
@@ -197,4 +86,31 @@ void rando(int *x, int *y, int d) {
             *y = 1 + rand() % 10;
             break;
     }
+}
+
+int resultado(int x, int y, char o) {
+    switch (o) {
+        case '+': return x + y;
+        case '-': return x - y;
+        case '*': return x * y;
+        case '/': return x / y;
+    }
+}
+
+void op(char o) {
+    int x, y, d, resposta;
+    printf("Escolhe a dificuldade: ");
+    scanf(" %d", &d);
+    rando(&x, &y, d);
+
+    while (1) {
+        printf("Quanto é %d %c %d", x, o, y);
+        scanf(" %d", &resposta);
+
+        if (resposta == resultado(x, y, o)) {
+            certo();
+            break;
+        } else errado();
+    }
+
 }

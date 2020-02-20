@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="45a28d21-489a-432b-aca4-845d4187c7d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/principal.c" beforeDir="false" afterPath="$PROJECT_DIR$/principal.c" afterDir="false" />
-    </list>
+    <list default="true" id="45a28d21-489a-432b-aca4-845d4187c7d5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAFT2_T3" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager">
@@ -62,6 +58,7 @@
       <workItem from="1581187141004" duration="562000" />
       <workItem from="1581794156545" duration="86000" />
       <workItem from="1582134106299" duration="921000" />
+      <workItem from="1582196714955" duration="24000" />
     </task>
     <servers />
   </component>
@@ -69,9 +66,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="771" y="310" width="426" height="493" key="FileChooserDialogImpl" timestamp="1581187701420">
-      <screen x="59" y="27" width="1861" height="1053" />
+    <state x="735" y="280" width="426" height="493" key="FileChooserDialogImpl" timestamp="1582196737285">
+      <screen x="0" y="0" width="1920" height="1043" />
     </state>
+    <state x="735" y="280" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1582196737285" />
     <state x="771" y="310" width="426" height="493" key="FileChooserDialogImpl/59.27.1861.1053@59.27.1861.1053" timestamp="1581187701420" />
     <state width="1876" height="277" key="GridCell.Tab.0.bottom" timestamp="1582135026555">
       <screen x="0" y="0" width="1920" height="1043" />
@@ -97,9 +95,10 @@
       <screen x="59" y="27" width="1861" height="1053" />
     </state>
     <state x="477" y="188" width="1024" height="737" key="SettingsEditor/59.27.1861.1053@59.27.1861.1053" timestamp="1581187254820" />
-    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1582134105841">
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1582196716729">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043/1920.0.1920.1080@0.0.1920.1043" timestamp="1582134105841" />
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1582196716729" />
   </component>
 </project>

@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/LAFT3.dir/main.c.o CMakeFiles/LAFT3.dir/desenhos.c.o  -o LAFT3 
