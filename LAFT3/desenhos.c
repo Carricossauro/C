@@ -5,6 +5,7 @@ void imprime_triangulo(int num_linhas) {
     int linha = 1;
 
     for (int i = 0; i < num_linhas; i++) {
+        putchar(' ');
         imprimeLinha(linha++, num_linhas);
         putchar('\n');
     }
@@ -37,12 +38,52 @@ void imprimeLinha(int linha, int nl) {
 
     //Prints
     for (i = 1; i <= nl; i++) {
-        printf("%c", ar[i]);
-        putchar(' ');
+        printf("%c ", ar[i]);
     }
 
     for (i = nl - 1; i >= 0; i--) {
-        printf("%c", ar[i]);
-        putchar(' ');
+        printf("%c ", ar[i]);
     }
+}
+
+void imprime_hexagono(int num) {
+    prim_ult(num);
+
+    for (int l = 1; l <= num; l++) {
+        for (int i = 0; i < num - l; i++)
+            putchar(' ');
+
+        putchar('#');
+
+        for (int i = 0; i < num + (2 * (l - 1));i++)
+            putchar(' ');
+
+        putchar('#');
+        putchar('\n');
+    }
+
+    for (int l = num - 1; l >= 1; l--) {
+        for (int i = 0; i < num - l; i++)
+            putchar(' ');
+
+        putchar('#');
+
+        for (int i = 0; i < num + (2 * (l - 1));i++)
+            putchar(' ');
+
+        putchar('#');
+        putchar('\n');
+    }
+
+    prim_ult(num);
+}
+
+void prim_ult(int n) {
+    for (int i = 0; i < n; i++)
+        putchar(' ');
+
+    for (int i = 0; i < n; i++)
+        putchar('#');
+
+    putchar('\n');
 }
