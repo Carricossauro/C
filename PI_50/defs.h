@@ -14,3 +14,4 @@ int ex3();
 int ex4(unsigned int a);
 int ex5(unsigned int a);
 int ex6(unsigned int a);
+void *ex7(char s1[], char s2[]);

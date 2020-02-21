@@ -6,6 +6,7 @@
 int main() {
     int exercicio, resultado;
     unsigned int a;
+    char s1[50], s2[50];
     printf("Exercício: ");
     scanf("%d", &exercicio);
     switch (exercicio) {
@@ -14,32 +15,45 @@ int main() {
             break;
         case 1:
             resultado = ex1();
+            printf("Resultado: %d\n", resultado);
             break;
         case 2:
             resultado = ex2();
+            printf("Resultado: %d\n", resultado);
             break;
         case 3:
             resultado = ex3();
+            printf("Resultado: %d\n", resultado);
             break;
         case 4:
             printf("Introduza o número: ");
             scanf("%d", &a);
             resultado = ex4(a);
+            printf("Resultado: %d\n", resultado);
             break;
         case 5:
             printf("Introduza o número: ");
             scanf("%d", &a);
             resultado = ex5(a);
+            printf("Resultado: %d\n", resultado);
             break;
         case 6:
             printf("Introduza o número: ");
             scanf("%d", &a);
             resultado = ex6(a);
+            printf("Resultado: %d\n", resultado);
+            break;
+        case 7:
+            printf("Primeiro string: ");
+            scanf("%s", s1);
+            printf("Segundo string: ");
+            scanf("%s", s2);
+            ex7(s1, s2);
+            printf("%s", s1);
             break;
         default:
             return 0;
     }
-    printf("Resultado: %d\n", resultado);
     return 0;
 }
 int ex1_alt() {
@@ -158,4 +172,17 @@ int ex6(unsigned int a) {
         else x++;
     }
     return x;
+}
+
+//Esta merda dá para fazer mais simples, não sei é como
+void *ex7(char s1[], char s2[]) {
+    int size, i = 0, size2;
+    while (s1[i++] != '\000');
+    size = --i;
+    while (s2[size2++] != '\000');
+    size2--;
+    s1[size++] = ' ';
+    for (i = 0; i < size2; i++) {
+        s1[size + i] = s2[i];
+    }
 }
