@@ -26,24 +26,15 @@ void imprime_losango(int num_linhas) {
 }
 
 void imprimeLinha(int linha, int nl) {
-    char ar[nl];
-    int x = nl - linha, ca = 65, i;
+    int ca = 65;
+    for (int i = 0; i < 2 * (nl - linha); i++)
+        putchar(' ');
 
-    //Guarda as letras ou espaçoes nos arrays
-    for (i = 1; i <= x; i++)
-        ar[i] = ' ';
-
-    for (;i <= nl; i++)
-        ar[i] = ca++;
-
-    //Prints
-    for (i = 1; i <= nl; i++) {
-        printf("%c ", ar[i]);
-    }
-
-    for (i = nl - 1; i >= 0; i--) {
-        printf("%c ", ar[i]);
-    }
+    for (int i = 0; i < linha; i++)
+        printf("%c ", ca++);
+    ca--;
+    for (int i = 0; i < linha - 1; i++)
+        printf("%c ", --ca);
 }
 
 void imprime_hexagono(int num) {
