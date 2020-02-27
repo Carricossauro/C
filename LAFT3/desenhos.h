@@ -10,5 +10,6 @@ void imprimeLinha(int linha, int nl);
 void imprime_losango(int num_linhas);
 void imprime_hexagono(int num);
 void prim_ult(int n);
+void hex(int num, int l);
 
 #endif //LAFT3_DESENHOS_H

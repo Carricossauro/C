@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
         switch(tarefa) {
             case 1: imprime_triangulo(numero); break;
             case 2: imprime_losango(numero); break;
-            case 3: imprime_hexagono(numero - 1); break;
+            case 3: imprime_hexagono(numero); break;
             default: printf("Erro! Tarefa desconhecida: %d\n", tarefa);
         }
     }
