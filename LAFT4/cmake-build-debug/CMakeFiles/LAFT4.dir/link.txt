@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/LAFT4.dir/main.c.o  -o LAFT4 
