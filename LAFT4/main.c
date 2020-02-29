@@ -14,22 +14,15 @@ int main() {
     arr = malloc(n * sizeof(int));
     printf("Array: \n");
     for (int o = 0; o < n; o++) scanf("%d", &arr[o]);
-    if (ex == 1) {
-        printf("Indice: ");
-        scanf("%d", &i);
-        soma_elemento(arr, n, i);
-        for (int m = 0; m < n; m++) printf("%d ", arr[m]);
-    } else if (ex == 2) {
-        printf("Shifter: ");
-        scanf("%d", &i);
-        roda_esq(arr, n, i);
-        for (int m = 0; m < n; m++) printf("%d ", arr[m]);
-    } else if (ex == 3) {
-        printf("Valor: ");
-        scanf("%d", &i);
-        remove_menores(arr, n, i);
-        for (int m = 0; m < n; m++) printf("%d ", arr[m]);
-    }
+
+    printf((ex == 1) ? "Indice: " : ((ex == 2) ? "Shifter: " : "Valor: "));
+    scanf("%d", &i);
+    if (ex == 1) soma_elemento(arr, n, i);
+    else if (ex == 2) roda_esq(arr, n, i);
+    else if (ex == 3) remove_menores(arr, n, i);
+
+    for (int m = 0; m < n; m++) printf("%d ", arr[m]);
+    printf("\n");
     return 0;
 }
 
@@ -61,5 +54,5 @@ int remove_menores(int *arr, int dim, int valor) {
 
     int pos = 0;
     for (int i = 0; i < dim; i++) if (arr[i] >= valor) arr[pos++] = arr[i];
-    for(int i = 0; i < posFim; i++) arr[pos++] = fim[i];
+    for (int i = 0; i < posFim; i++) arr[pos++] = fim[i];
 }
