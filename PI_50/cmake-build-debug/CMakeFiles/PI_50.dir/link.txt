@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/PI_50.dir/main.c.o CMakeFiles/PI_50.dir/defs.c.o  -o PI_50 
