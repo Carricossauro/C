@@ -86,13 +86,14 @@ int ex6(unsigned int a) {
     return x;
 }
 
-void *ex7(char s1[], char s2[]) {
+char *ex7(char s1[], char s2[]) {
     int size, size2;
     size = strlen(s1);
     size2 = strlen(s2);
     for (int i = 0; i < size2; i++) {
         s1[size + i] = s2[i];
     }
+    return s1;
 }
 
 char *ex8(char *dest, char *source) {

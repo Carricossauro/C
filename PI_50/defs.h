@@ -11,7 +11,7 @@ int ex3();
 int ex4(unsigned int a);
 int ex5(unsigned int a);
 int ex6(unsigned int a);
-void *ex7(char s1[], char s2[]);
+char *ex7(char s1[], char s2[]);
 char *ex8(char *dest, char *source);
 int ex9(char s1[], char s2[]);
 char *ex10(char s1[], char s2[]);
