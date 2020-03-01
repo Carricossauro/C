@@ -1,58 +1,52 @@
 #include "defs.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int ex1() {
-    int ar[50], maior;
+    int n, maior;
     printf("Sequência:\n");
-    for (int i = 0; i < 50; i++) {
-        scanf("%d", &ar[i]);
-        if (ar[i] == 0) break;
-        if (i == 0) maior = i;
-        else if (ar[i] > maior) {
-            maior = ar[i];
+    scanf("%d", &maior);
+    while (n != 0) {
+        scanf("%d", &n);
+        if (n > maior) {
+            maior = n;
         }
     }
     return maior;
 }
 
 int ex2() {
-    float ar[50], soma = 0, els = 0, media;
+    float n, soma = 0, i = 0, media;
     printf("Sequência:\n");
     //Recebe a sequência
-    for (int i = 0; i < 50; i++) {
-        scanf("%f",&ar[i]);
-        if (ar[i] == 0) break;
-        soma += ar[i];
-        els++;
+    while (n != 0) {
+        scanf("%f",&n);
+        if (n == 0) break;
+        soma += n;
+        i++;
     }
 
     //Calcula a média
-    media = soma/els;
+    media = soma/(i);
     return media;
 }
 
 int ex3() {
-    int ar[50], maior, segundo, nset = 1;
+    int n, maior, segundo;
     printf("Sequência:\n");
-    //Determina o maior elemento da sequência (enquanto a recebe)
-    for (int i = 0; i <= 49; i++) {
-        scanf("%d", &ar[i]);
-        if (ar[i] == 0) break;
-        if (i == 0) maior = ar[i];
-        else if (ar[i] > maior) maior = ar[i];
+    scanf("%d", &maior);
+    scanf("%d", &n);
+    if (n <= maior) segundo = n;
+    else {
+        segundo = maior;
+        maior = n;
     }
-    //Determina o segundo maior elemento
-    for (int i = 0;i <= 49; i++) {
-        if (ar[i] == 0) break;
-        if (ar[i] != maior) {
-            if (nset) {
-                nset = 0;
-                segundo = ar[i];
-            } else if (ar[i] > segundo) {
-                segundo = ar[i];
-            }
-        }
+    while (n != 0) {
+        scanf("%d", &n);
+        if (n == 0) break;
+        else if (n >= maior) maior = n;
+        else if (n > segundo) segundo = n;
     }
     return segundo;
 }
@@ -127,4 +121,74 @@ char *ex10(char s1[], char s2[]) {
         p1++;
     }
     return p;
+}
+
+void ex11(char s[]) {
+    int tam = strlen(s), pos = 0, i;
+    char *arr = malloc(tam * sizeof(char));
+
+    for (i = tam - 1; i >= 0; i--) arr[pos++] = s[i];
+    for (i = 0; i < tam; i++) s[i] = arr[i];
+}
+
+void ex12(char s[]) {
+    int pos = 0, n = strlen(s);
+    for (int i = 0; i < n; i++) {
+        if (s[i] != 'a' && s[i] != 'e' && s[i] != 'i' && s[i] != 'o' && s[i] != 'u'
+         && s[i] != 'A' && s[i] != 'E' && s[i] != 'I' && s[i] != 'O' && s[i] != 'U')
+            s[pos++] = s[i];
+    }
+    s[pos] = '\0';
+}
+
+void ex13(char t[], int n) {
+    int i, pos = 0, tLen = strlen(t), p = 0, pl = 1;
+
+    for (i = 0; i < tLen; i++) {
+        if (t[i] == ' ') {
+            t[pos++] = ' ';
+            p = 0;
+            pl = 1;
+        } else if (pl) {
+            if (++p <= n && n != 0) t[pos++] = t[i];
+            else {
+                p = 0;
+                pl = 0;
+            }
+        }
+    }
+    t[pos] = '\0';
+}
+
+char ex14(char s[]) {
+    int n = strlen(s), vs = 0, vLetra = 0, i, o;
+    char letra, l;
+    if (!n) letra = 0;
+    else {
+        for (i = 0; i < n; i++) {
+            vs = 0;
+            l = s[i];
+            for (o = 0; o < n; o++) {
+                if (s[i] == s[o]) vs++;
+            }
+            if (vs > vLetra) {
+                letra = l;
+                vLetra = vs;
+            }
+        }
+    }
+    return letra;
+}
+
+int ex15(char s[]) {
+    int n = strlen(s), vs = 0, r = 0, i, o;
+    for (i = 0; i < n; i++) {
+        vs = 0;
+        for (o = i; o < n; o++) {
+            if (s[i] == s[o]) vs++;
+            else break;
+        }
+        if (vs > r) r = vs;
+    }
+    return r;
 }

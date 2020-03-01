@@ -6,18 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_50/defs.c
-defs.h
-/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_50/defs.h
-string.h
--
-stdio.h
--
-
 /home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_50/defs.h
 
 /home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_50/main.c
 stdio.h
+-
+string.h
 -
 defs.h
 /home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_50/defs.h

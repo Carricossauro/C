@@ -1,7 +1,3 @@
-//
-// Created by carricossauro on 07/02/20.
-//
-
 #ifndef PI_50_DEFS_H
 #define PI_50_DEFS_H
 
@@ -15,5 +11,10 @@ char *ex7(char s1[], char s2[]);
 char *ex8(char *dest, char *source);
 int ex9(char s1[], char s2[]);
 char *ex10(char s1[], char s2[]);
+void ex11(char s[]);
+void ex12(char s[]);
+void ex13(char t[], int n);
+char ex14(char s[]);
+int ex15(char s[]);
 
 #endif //PI_50_DEFS_H

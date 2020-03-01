@@ -1,6 +1,5 @@
-#pragma ide diagnostic ignored "hicpp-multiway-paths-covered"
-#pragma ide diagnostic ignored "cert-err34-c"
 #include <stdio.h>
+#include <string.h>
 #include "defs.h"
 
 int main() {
@@ -69,6 +68,36 @@ int main() {
             scanf("%s", s2);
             res = ex10(s1, s2);
             printf("%s\n", res);
+            break;
+        case 11:
+            printf("String: ");
+            scanf("%s", s1);
+            ex11(s1);
+            printf("%s", s1);
+            break;
+        case 12:
+            printf("String: ");
+            scanf("%s", s1);
+            ex12(s1);
+            printf("%s", s1);
+            break;
+        case 13:
+            printf("String: ");
+            strcpy(s1, "ola mundo joao");
+            ex13(s1, 2);
+            printf("%s", s1);
+            break;
+        case 14:
+            printf("String: ");
+            strcpy(s1, "mundo cruel!");
+            *res = ex14(s1);
+            printf("%c", *res);
+            break;
+        case 15:
+            printf("String: ");
+            scanf("%s", s1);
+            resultado = ex15(s1);
+            printf("%d", resultado);
             break;
     }
     return 0;
