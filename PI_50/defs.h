@@ -16,5 +16,10 @@ void ex12(char s[]);
 void ex13(char t[], int n);
 char ex14(char s[]);
 int ex15(char s[]);
+int ex16(char s[]);
+int ex17(char s1[], char s2[]);
+int ex18(char s1[], char s2[]);
+int ex19(char s1[], char s2[]);
+int ex20(char s[]);
 
 #endif //PI_50_DEFS_H

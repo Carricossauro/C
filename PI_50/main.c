@@ -83,13 +83,13 @@ int main() {
             break;
         case 13:
             printf("String: ");
-            strcpy(s1, "ola mundo joao");
+            strcpy(s1, "ola mundo cruel");
             ex13(s1, 2);
             printf("%s", s1);
             break;
         case 14:
             printf("String: ");
-            strcpy(s1, "mundo cruel!");
+            strcpy(s1, "mundo cruel!!!");
             *res = ex14(s1);
             printf("%c", *res);
             break;
@@ -97,6 +97,42 @@ int main() {
             printf("String: ");
             scanf("%s", s1);
             resultado = ex15(s1);
+            printf("%d", resultado);
+            break;
+        case 16:
+            printf("String: ");
+            strcpy(s1, "mundo cruel!!!");
+            resultado = ex16(s1);
+            printf("%d", resultado);
+            break;
+        case 17:
+            printf("Primeiro string: ");
+            scanf("%s", s1);
+            printf("Segundo string: ");
+            scanf("%s", s2);
+            resultado = ex17(s1, s2);
+            printf("%d", resultado);
+            break;
+        case 18:
+            printf("Primeiro string: ");
+            strcpy(s1, "xax");
+            printf("Segundo string: ");
+            strcpy(s2, "ax");
+            resultado = ex18(s1, s2);
+            printf("%d", resultado);
+            break;
+        case 19:
+            printf("Primeiro string: ");
+            strcpy(s1, "batota");
+            printf("Segundo string: ");
+            strcpy(s2, "totalidade");
+            resultado = ex19(s1, s2);
+            printf("%d", resultado);
+            break;
+        case 20:
+            printf("String: ");
+            strcpy(s1, "ola mundo cruel");
+            resultado = ex20(s1);
             printf("%d", resultado);
             break;
     }

@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int ex1() {
     int n, maior;
@@ -191,4 +192,83 @@ int ex15(char s[]) {
         if (vs > r) r = vs;
     }
     return r;
+}
+
+int ex16(char s[]) {
+    int n = strlen(s), vs = 0, r = 0, i, o;
+    for (i = 0; i < n; i++) {
+        vs = 0;
+        for (o = i; o < n; o++) {
+            if (o == 0) vs++;
+            else if (s[o] == ' ') continue;
+            else if (s[o - 1] == s[o]) break;
+            else vs++;
+        }
+        if (vs > r) r = vs;
+    }
+    return r;
+}
+
+int ex17(char s1[], char s2[]) {
+    int n1 = strlen(s1), n2 = strlen(s2);
+    int n = (n1 < n2 ? n1 : n2), r = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (s1[i] == s2[i]) r++;
+        else break;
+    }
+    return r;
+}
+
+int ex18(char s1[], char s2[]) {
+    int n1 = strlen(s1), n2 = strlen(s2);
+    int n = (n1 < n2 ? n1 : n2), r = 0, pos = 0;
+    char s1i[n1], s2i[n2];
+
+    for (int i = n1 - 1; i >= 0; i--) s1i[pos++] = s1[i];
+    pos = 0;
+    for (int i = n2 - 1; i >= 0; i--) s2i[pos++] = s2[i];
+
+    for (int i = 0; i < n; i++) {
+        if (s1i[i] == s2i[i]) r++;
+        else break;
+    }
+    return r;
+}
+
+int ex19(char s1[], char s2[]) {
+    int n1 = strlen(s1), n2 = strlen(s2);
+    int n = (n1 < n2 ? n1 : n2), r = 0, pos = 0, re = 0, i, o;
+    char s1i[n1];
+
+    for (i = 0; i < n1; i++) {
+        if (s1[i] == s2[0]) {
+            pos = i;
+            for (o = 0; s1[pos] != '\0'; o++) {
+                if (s1[pos++] == s2[o]) r++;
+                else {
+                    r = 0;
+                    break;
+                }
+            }
+        }
+        if (r != 0) break;
+    }
+    return r;
+}
+
+int ex20(char s[]) {
+    int n = strlen(s), pal = 0, o, i;
+
+    for (i = 0; i < n; i++) {
+        if (isspace(s[i])) continue;
+        else {
+            for (o = i; o < n; o++)
+                if (isspace(s[o])) break;
+            i = o;
+            pal++;
+        }
+    }
+
+    return pal;
 }
