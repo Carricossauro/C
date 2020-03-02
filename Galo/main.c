@@ -34,7 +34,7 @@ void player(char *tab[], int p) {
     while (!j) {
         printf("Jogada do player %d: ", p);
         scanf("%d", &n);
-        j = valida(tab, n, p);
+        j = valida(tab, --n, p);
     }
 }
 
@@ -71,7 +71,7 @@ int ganho(char *tab[]) {
 int valida(char *tab[], int n,int p) {
     int jogado = 0;
 
-    int m = (n <= 2) ? 0 : (n <= 5) ? 1 : 2;
+    int m = (n <= 2) ? 2 : (n <= 5) ? 1 : 0;
     n = (n <= 2) ? n : (n <= 5) ? n - 3 : n - 6;
 
     if (tab[m][n] == ' ') {
@@ -84,7 +84,6 @@ int valida(char *tab[], int n,int p) {
 
 void printTabuleiro(char *tab[]) {
     system("clear");
-    for (int i = 0; i < 3; i++) printf((i == 0) ? "| %c |" : (i == 2) ? " %c |\n" : " %c |", tab[0][i]);
-    for (int i = 0; i < 3; i++) printf((i == 0) ? "| %c |" : (i == 2) ? " %c |\n" : " %c |", tab[1][i]);
-    for (int i = 0; i < 3; i++) printf((i == 0) ? "| %c |" : (i == 2) ? " %c |\n" : " %c |", tab[2][i]);
+    for (int o = 0; o < 3; o++)
+        for (int i = 0; i < 3; i++) printf((i == 0) ? "| %c |" : (i == 2) ? " %c |\n" : " %c |", tab[o][i]);
 }
