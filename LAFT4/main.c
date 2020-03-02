@@ -19,27 +19,25 @@ int main() {
     scanf("%d", &i);
     if (ex == 1) soma_elemento(arr, n, i);
     else if (ex == 2) roda_esq(arr, n, i);
-    else if (ex == 3) remove_menores(arr, n, i);
+    else if (ex == 3) printf("%d\n" , remove_menores(arr, n, i));
 
-    for (int m = 0; m < n; m++) printf("%d ", arr[m]);
+    for (int m = 0; m < n; m++) printf((m == 0) ? "{ %d," : (m == n - 1) ? "%d}" : "%d ,", arr[m]);
     printf("\n");
     return 0;
 }
 
 void soma_elemento(int *arr, int dim, int idx) {
     int num;
-    if (idx < dim) {
+    if (idx < dim - 1) {
         num = arr[idx];
         for (int i = 0; i < dim; i++) arr[i] = arr[i] + num;
     }
 }
 
 void roda_esq(int *arr, int dim, int shifter) {
-    while (shifter >= dim) {
-        shifter -= dim;
-    }
+    while (shifter >= dim) shifter -= dim;
 
-    int *fim = malloc(shifter * sizeof(int));
+    int fim[shifter];
     for (int i = 0; i < shifter; i++) fim[i] = arr[i];
 
     int pos = 0;
@@ -48,8 +46,7 @@ void roda_esq(int *arr, int dim, int shifter) {
 }
 
 int remove_menores(int *arr, int dim, int valor) {
-    int *fim, posFim = 0;
-    fim = malloc(dim * sizeof(int));
+    int fim[dim], posFim = 0;
     for (int i = 0; i < dim; i++) if (arr[i] < valor) fim[posFim++] = arr[i];
 
     int pos = 0;
