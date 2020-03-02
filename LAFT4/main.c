@@ -21,7 +21,7 @@ int main() {
     else if (ex == 2) roda_esq(arr, n, i);
     else if (ex == 3) printf("%d\n" , remove_menores(arr, n, i));
 
-    for (int m = 0; m < n; m++) printf((m == 0) ? "{ %d," : (m == n - 1) ? "%d}" : "%d ,", arr[m]);
+    for (int m = 0; m < n; m++) printf((m == 0) ? "{%d , " : (m == n - 1) ? "%d}" : "%d , ", arr[m]);
     printf("\n");
     return 0;
 }
