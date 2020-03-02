@@ -141,6 +141,14 @@ int main() {
             resultado = ex21(s1);
             printf("%d", resultado);
             break;
+        case 22:
+            printf("Primeiro string: ");
+            strcpy(s1, "braga");
+            printf("Segundo string: ");
+            strcpy(s2, "bracara augusta");
+            resultado = ex22(s1, s2);
+            printf("%d", resultado);
+            break;
     }
     return 0;
 }

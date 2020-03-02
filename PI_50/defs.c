@@ -288,11 +288,14 @@ int ex21(char s[]) {
 }
 
 int ex22(char a[], char b[]) {
-    int n = strlen(a), nb = strlen(b), v = 1;
+    int n = strlen(a), nb = strlen(b), v = 1, i, o = 0;
 
-    for (int i = 0; i < n; i++) {
-        for (int o = 0; o < nb; o++)
-            if (a[i] != b[o] && o == nb - 1) v = 0;
-    }
+    if (nb > 0) {
+        for (i = 0; i < n; i++) {
+            for (o = 0; o < nb && a[i] != b[o]; o++)
+                if (o >= nb - 1) v = 0;
+        }
+    } else v = 0;
+    
     return v;
 }

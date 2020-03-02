@@ -22,5 +22,6 @@ int ex18(char s1[], char s2[]);
 int ex19(char s1[], char s2[]);
 int ex20(char s[]);
 int ex21(char s[]);
+int ex22(char a[], char b[]);
 
 #endif //PI_50_DEFS_H
