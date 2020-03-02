@@ -24,7 +24,7 @@ int main() {
         jog++;
     }
     g = ganho(tab);
-    printf((g == 0) ? "Empate\n" : (g == 1) ? "Vitória do jogador 1!\n" : "Vitória do jogador 2!\n");
+    printf((g == 0) ? "Empate\n" : "Vitória do jogador %d!\n", g);
     return 0;
 }
 
@@ -32,9 +32,9 @@ void player(char *tab[], int p) {
     int n, j = 0;
 
     while (!j) {
-        printf("Jogada do player %d: ", ((p == 1) ? 1 : 2));
+        printf("Jogada do player %d: ", p);
         scanf("%d", &n);
-        j = (p == 1) ? valida(tab, n, 1) : valida(tab, n, 2);
+        j = valida(tab, n, p);
     }
 }
 
