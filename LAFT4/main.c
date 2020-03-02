@@ -55,4 +55,5 @@ int remove_menores(int *arr, int dim, int valor) {
     int pos = 0;
     for (int i = 0; i < dim; i++) if (arr[i] >= valor) arr[pos++] = arr[i];
     for (int i = 0; i < posFim; i++) arr[pos++] = fim[i];
+    return pos;
 }
