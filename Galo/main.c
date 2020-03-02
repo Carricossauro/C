@@ -40,20 +40,22 @@ void player(char *tab[], int p) {
 
 int ganho(char *tab[]) {
     printTabuleiro(tab);
-    int res = 0;
+    int res = 0, ganho = 1;
     for (int i = 0; i < 3; i++)
         if (tab[i][0] == tab[i][1] && tab[i][0] == tab[i][2]) {
             res = ((tab[i][0] == 'X') ? 1 : (tab[i][0] == 'O') ? 2 : 0);
+            ganho = 0;
             break;
         }
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 3 && ganho; i++)
         if (tab[0][i] == tab[1][i] && tab[2][i] == tab[0][i]) {
             res = ((tab[0][i] == 'X') ? 1 : (tab[0][i] == 'O') ? 2 : 0);
+            ganho = 0;
             break;
         }
 
-    if (tab[1][1] != ' ' && res == 0) {
+    if (tab[1][1] != ' ' && res == 0 && ganho) {
         if (tab[1][1] == tab[0][0])
             if (tab[1][1] == tab[2][2])
                 res = ((tab[1][1] == 'X') ? 1 : 2);
