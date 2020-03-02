@@ -272,3 +272,27 @@ int ex20(char s[]) {
 
     return pal;
 }
+
+int ex21(char s[]) {
+    int n = strlen(s), v = 0;
+    char vm[] = {'a', 'e','i','o','u'}, vM[] = {'A', 'E', 'I', 'O', 'U'};
+
+    for (int i = 0; i < n; i++) {
+        for (int o = 0; o < 5; o++)
+            if (vm[o] == s[i] || vM[o] == s[i]) {
+                v++;
+                break;
+            }
+    }
+    return v;
+}
+
+int ex22(char a[], char b[]) {
+    int n = strlen(a), nb = strlen(b), v = 1;
+
+    for (int i = 0; i < n; i++) {
+        for (int o = 0; o < nb; o++)
+            if (a[i] != b[o] && o == nb - 1) v = 0;
+    }
+    return v;
+}

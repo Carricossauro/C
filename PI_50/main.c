@@ -135,6 +135,12 @@ int main() {
             resultado = ex20(s1);
             printf("%d", resultado);
             break;
+        case 21:
+            printf("String: ");
+            strcpy(s1, "ola mundo cruel");
+            resultado = ex21(s1);
+            printf("%d", resultado);
+            break;
     }
     return 0;
 }
