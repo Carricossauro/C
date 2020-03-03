@@ -299,3 +299,57 @@ int ex22(char a[], char b[]) {
     
     return v;
 }
+
+int ex23(char s[]) {
+    int n = strlen(s), r = 1, pos = 0, par = (n % 2 == 0);
+        for (int i = n - 1; par ? (i >= n/2) : (i > n/2); i--, pos++)
+            if (s[i] != s[pos]) {
+                r = 0;
+                break;
+            }
+    return r;
+}
+
+int ex24(char s[]) {
+    int n = strlen(s), pos = 0, i;
+    char ant;
+
+    if (n > 0) {
+        ant = s[pos++];
+        for (i = 1; i < n; i++) {
+            if (s[i] != ant) {
+                ant = s[i];
+                s[pos++] = ant;
+            }
+        }
+        s[pos] = '\0';
+    }
+
+    return pos;
+}
+
+int ex25(char s[]) {
+    int n = strlen(s), pos = 0, esp = 0, i;
+    for (i = 0; i < n; i++) {
+        if (isspace(s[i])) {
+            if (esp == 0) {
+                s[pos++] = s[i];
+                esp = 1;
+            }
+        } else {
+            s[pos++] = s[i];
+            esp = 0;
+        }
+    }
+
+    s[pos] = '\0';
+    return pos;
+}
+
+void ex26(int v[], int n, int x) {
+    int i, v2[n];
+    for (i = 0; i < n; i++) v2[i] = v[i];
+    for (i = 0; x > v[i]; i++);
+    v[i++] = x;
+    for (; i <= n; i++) v[i] = v2[i - 1];
+}

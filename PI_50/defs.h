@@ -23,5 +23,9 @@ int ex19(char s1[], char s2[]);
 int ex20(char s[]);
 int ex21(char s[]);
 int ex22(char a[], char b[]);
+int ex23(char s[]);
+int ex24(char s[]);
+int ex25(char s[]);
+void ex26(int v[], int n, int x);
 
 #endif //PI_50_DEFS_H

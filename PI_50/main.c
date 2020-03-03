@@ -3,7 +3,7 @@
 #include "defs.h"
 
 int main() {
-    int exercicio, resultado;
+    int exercicio, resultado, arr[10] = {1,12,13,14,16,17,47,689,890};
     unsigned int a;
     char s1[50], s2[50], *res;
     printf("Exercício: ");
@@ -148,6 +148,28 @@ int main() {
             strcpy(s2, "bracara augusta");
             resultado = ex22(s1, s2);
             printf("%d", resultado);
+            break;
+        case 23:
+            printf("String: ");
+            strcpy(s1, "anna");
+            resultado = ex23(s1);
+            printf("%d", resultado);
+            break;
+        case 24:
+            printf("String: ");
+            strcpy(s1, "anna");
+            resultado = ex24(s1);
+            printf("%d %s", resultado, s1);
+            break;
+        case 25:
+            printf("String: ");
+            strcpy(s1, "an na  sdv dv    fvas");
+            resultado = ex25(s1);
+            printf("%d %s", resultado, s1);
+            break;
+        case 26:
+            ex26(arr, 9, 12);
+            for (int i = 0; i < 10; i++) printf("%d ", arr[i]);
             break;
     }
     return 0;
