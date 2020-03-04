@@ -354,3 +354,14 @@ void ex26(int v[], int n, int x) {
     v[i++] = x;
     for (; i <= n; i++) v[i] = v2[i - 1];
 }
+
+//Não funciona
+void ex27(int v[], int a[], int b[], int na, int nb) {
+    int n = na + nb, pa = 0, pb = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (a[pa] <= b[pb])
+            v[i] = a[pa++];
+        else v[i] = b[pb++];
+    }
+}
