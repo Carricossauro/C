@@ -13,10 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d75a1f4f-1620-4d16-99bb-6298b7f37f5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/PI_50" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/PI_50" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/defs.c" beforeDir="false" afterPath="$PROJECT_DIR$/defs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/defs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +102,8 @@
       <workItem from="1583170229370" duration="657000" />
       <workItem from="1583172864032" duration="12000" />
       <workItem from="1583248427377" duration="6367000" />
+      <workItem from="1583316418752" duration="48000" />
+      <workItem from="1583331979291" duration="88000" />
     </task>
     <servers />
   </component>
@@ -120,11 +119,11 @@
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="717" y="216" key="#xdebugger.evaluate/0.0.1920.1043@0.0.1920.1043" timestamp="1582999793193" />
-    <state x="735" y="280" width="426" height="481" key="FileChooserDialogImpl" timestamp="1583172875600">
+    <state x="735" y="280" width="426" height="481" key="FileChooserDialogImpl" timestamp="1583316464601">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
     <state x="735" y="280" key="FileChooserDialogImpl/0.0.1920.1043/1920.0.1920.1080@0.0.1920.1043" timestamp="1581532691123" />
-    <state x="735" y="280" width="426" height="481" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1583172875600" />
+    <state x="735" y="280" width="426" height="481" key="FileChooserDialogImpl/0.0.1920.1043@0.0.1920.1043" timestamp="1583316464601" />
     <state x="771" y="310" width="426" height="493" key="FileChooserDialogImpl/59.27.1861.1053@59.27.1861.1053" timestamp="1581163204304" />
     <state width="1876" height="312" key="GridCell.Tab.0.bottom" timestamp="1583254819747">
       <screen x="0" y="0" width="1920" height="1043" />
@@ -171,10 +170,10 @@
     </state>
     <state x="405" y="140" key="SettingsEditor/0.0.1920.1043@0.0.1920.1043" timestamp="1583086524817" />
     <state x="856" y="178" width="1022" height="737" key="SettingsEditor/59.27.1861.1053@59.27.1861.1053" timestamp="1581088682681" />
-    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1583172864414">
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1583316425882">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
-    <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1583172864414" />
+    <state x="641" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1043@0.0.1920.1043" timestamp="1583316425882" />
     <state x="756" y="439" width="397" height="157" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582745328141">
       <screen x="0" y="0" width="1920" height="1043" />
     </state>
@@ -193,21 +192,5 @@
     <state x="612" y="230" width="694" height="672" key="search.everywhere.popup/0.0.1920.1043/0.0.1920.1043@0.0.1920.1043" timestamp="1583151607086" />
     <state x="612" y="230" width="694" height="672" key="search.everywhere.popup/0.0.1920.1043@0.0.1920.1043" timestamp="1583029515701" />
     <state x="652" y="259" width="672" height="678" key="search.everywhere.popup/59.27.1861.1053@59.27.1861.1053" timestamp="1581088988692" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/defs.c</url>
-          <line>352</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>171</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

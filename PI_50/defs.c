@@ -106,8 +106,9 @@ int ex9(char s1[], char s2[]) {
 }
 
 char *ex10(char s1[], char s2[]) {
-    char *p = NULL, p1 = 0, p2 = 0, n = strlen(s1) - 1, pSave = 0;
-    while (p1 < n) {
+    char *p = NULL, p1, p2 = 0, n = strlen(s1) - 1, pSave = 0;
+
+    for (p1 = 0; p1 < n; p1++) {
         if (s1[p1] == s2[p2]) {
             pSave = p1;
             while (1) {
@@ -119,8 +120,8 @@ char *ex10(char s1[], char s2[]) {
             }
             if (p != NULL) break;
         }
-        p1++;
     }
+    
     return p;
 }
 

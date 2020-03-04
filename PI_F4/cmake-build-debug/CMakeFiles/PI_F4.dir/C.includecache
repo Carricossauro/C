@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F4/main.c
+stdio.h
+-
+ctype.h
+-
+string.h
+-
+
