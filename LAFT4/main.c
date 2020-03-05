@@ -21,7 +21,9 @@ int main() {
     else if (ex == 2) roda_esq(arr, n, i);
     else if (ex == 3) printf("%d\n" , remove_menores(arr, n, i));
 
-    for (int m = 0; m < n; m++) printf((m == 0) ? "{%d , " : (m == n - 1) ? "%d}" : "%d , ", arr[m]);
+    for (int m = 0; m < n; m++)
+        printf((m == 0) ? "{%d , " : (m == n - 1) ? "%d}" : "%d , ", arr[m]);
+
     printf("\n");
     return 0;
 }
@@ -35,7 +37,7 @@ void soma_elemento(int *arr, int dim, int idx) {
 }
 
 void roda_esq(int *arr, int dim, int shifter) {
-    while (shifter >= dim) shifter -= dim;
+    shifter = shifter % dim;
 
     int fim[shifter];
     for (int i = 0; i < shifter; i++) fim[i] = arr[i];
