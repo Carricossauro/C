@@ -3,7 +3,8 @@
 #include "defs.h"
 
 int main() {
-    int exercicio, resultado, arr[10] = {1,12,13,14,16,17,47,689,890};
+    int exercicio, resultado, arr[10] = {1,12,13,14,20}, ve[10] = {2,15,16,17,18}, r[10];
+    int neg[5] = {1, -2, 0, 3, -5}, rep[10] = {1, 2, 3, 2, 1, 4, 2, 4, 5, 4};
     unsigned int a;
     char s1[50], s2[50], *res;
     printf("Exercício: ");
@@ -170,6 +171,40 @@ int main() {
         case 26:
             ex26(arr, 9, 12);
             for (int i = 0; i < 10; i++) printf("%d ", arr[i]);
+            break;
+        case 27:
+            ex27(r, arr, ve, 5, 5);
+            for (int i = 0; i < 10; i++) printf("%d ", r[i]);
+            break;
+        case 28:
+            printf("%d", ex28(arr, 2, 4));
+            break;
+        case 29:
+            exercicio = ex29(neg, 5);
+            printf("%d\n", exercicio);
+            for(int i = 0; i < exercicio; i++) printf("%d ", neg[i]);
+            break;
+        case 30:
+            exercicio = ex30(rep, 10);
+            printf("%d\n", exercicio);
+            break;
+        case 31:
+            exercicio = ex31(rep, 10);
+            printf("%d\n", exercicio);
+            break;
+        case 32:
+            exercicio = ex32(rep, 10);
+            printf("%d\n", exercicio);
+            break;
+        case 33:
+            exercicio = ex33(rep, 10);
+            printf("%d\n", exercicio);
+            for (int i = 0; i < exercicio; i++) printf("%d ", rep[i]);
+            break;
+        case 34:
+            exercicio = ex34(rep, 10);
+            printf("%d\n", exercicio);
+            for (int i = 0; i < exercicio; i++) printf("%d ", rep[i]);
             break;
     }
     return 0;

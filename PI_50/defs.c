@@ -355,13 +355,119 @@ void ex26(int v[], int n, int x) {
     for (; i <= n; i++) v[i] = v2[i - 1];
 }
 
-//Não funciona
 void ex27(int v[], int a[], int b[], int na, int nb) {
     int n = na + nb, pa = 0, pb = 0;
 
     for (int i = 0; i < n; i++) {
-        if (a[pa] <= b[pb])
+        if (pa == na) v[i] = b[pb++];
+        else if (pb == nb) v[i] = a[pa++];
+        else if (a[pa] <= b[pb])
             v[i] = a[pa++];
         else v[i] = b[pb++];
     }
+}
+
+int ex28(int a[], int i, int j) {
+    int anterior = a[i], cres = 1;
+
+    for(int k = i + 1; k <= j; k++) {
+        if (a[k] < anterior) cres = 0;
+        else anterior = a[k];
+    }
+    return cres;
+}
+
+int ex29(int v[], int n) {
+    int pos = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (v[i] >= 0) v[pos++] = v[i];
+    }
+    return pos;
+}
+
+int ex30(int v[], int n) {
+    int vs = n+1, s = 0, num = -1, i, k;
+
+    for (i = 0; i < n; i++) {
+        for (k = i; k < n; k++) {
+            if (v[k] == v[i]) s++;
+            else if (s < vs) {
+                vs = s;
+                num = v[i];
+                break;
+            } else break;
+        }
+        if (k == n && s < vs) {
+            vs = s;
+            num = v[i];
+        }
+        i = k - 1;
+        s = 0;
+    }
+    return num;
+}
+
+int ex31(int v[], int n) {
+    int vs = 0, s = 0, num = -1, i, k;
+
+    for (i = 0; i < n; i++) {
+        for (k = i; k < n; k++) {
+            if (v[k] == v[i]) s++;
+            else if (s > vs) {
+                vs = s;
+                num = v[i];
+                break;
+            } else break;
+        }
+        if (k == n && s > vs) {
+            vs = s;
+            num = v[i];
+        }
+        i = k - 1;
+        s = 0;
+    }
+    return num;
+}
+
+int ex32(int v[], int n) {
+    int vs = 0, s = 1, anterior;
+
+    for(int i = 0; i < n; i++) {
+        if (v[i] < anterior) {
+            s = 1;
+        } else s++;
+
+        if (vs < s) vs = s;
+        anterior = v[i];
+    }
+    return vs;
+}
+
+int ex33(int v[], int n) {
+    int pos = 0, rep = 0;
+
+    for (int i = 0; i < n; i++) {
+        rep = 0;
+
+        for (int k = 0; k < pos; k++) {
+            if (v[k] == v[i]) rep = 1;
+        }
+
+        if (!rep)
+            v[pos++] = v[i];
+    }
+    return pos;
+}
+
+int ex34(int v[], int n) {
+    int pos = 0;
+
+    for (int i = 0; i < n; i++) {
+        v[pos++] = v[i];
+        for (int k = i + 1; k < n && v[k] == v[i]; k++)
+        i = k;
+    }
+
+    return pos;
 }

@@ -27,5 +27,14 @@ int ex23(char s[]);
 int ex24(char s[]);
 int ex25(char s[]);
 void ex26(int v[], int n, int x);
+void ex27(int v[], int a[], int b[], int na, int nb);
+int ex28(int a[], int i, int j);
+int ex29(int v[], int n);
+int ex30(int v[], int n);
+int ex31(int v[], int n);
+int ex32(int v[], int n);
+int ex33(int v[], int n);
+int ex34(int v[], int n);
+int ex35(int a[], int na, int b[], int nb);
 
 #endif //PI_50_DEFS_H
