@@ -471,3 +471,30 @@ int ex34(int v[], int n) {
 
     return pos;
 }
+
+int ex35(int a[], int na, int b[], int nb) {
+    int reps = 0, pos = 0, i;
+
+    for (i = 0; i < na; i++) {
+        for (; pos < nb && a[i] > b[pos]; pos++);
+        if (a[i] == b[pos]) {
+            reps++;
+            pos++;
+        }
+    }
+    return reps;
+}
+
+int ex36(int a[], int na, int b[], int nb) {
+    int reps = 0;
+
+    for (int i = 0; i < na; i++) {
+        for (int o = 0; o < nb ; o++) {
+            if (a[i] == b[o]) {
+                reps++;
+                break;
+            }
+        }
+    }
+    return reps;
+}
