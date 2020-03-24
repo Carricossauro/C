@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/PI_F7.dir/main.c.o CMakeFiles/PI_F7.dir/ex1.c.o CMakeFiles/PI_F7.dir/ex2.c.o  -o PI_F7 
