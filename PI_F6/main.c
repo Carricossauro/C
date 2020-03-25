@@ -4,117 +4,82 @@
 
 #define MAX 100
 typedef struct queue {
-    int inicio;
-    int tamanho;
+    int inicio, tamanho, size;
     int *valores;
 } QUEUE;
 
-void initQueue(QUEUE *q);
-int isEmpty(QUEUE *q);
-int enqueue(QUEUE *q, int x);
-int dequeue(QUEUE *q, int *x);
-int front(QUEUE *q, int *x);
-void reallocate(QUEUE *q);
-void reallocate2(QUEUE *q);
+// [1,2,_,_,_]
+// [_,2,_,_,_]
+// [_,2,3,_,_]
 
-int main() {
-    QUEUE *q = (QUEUE *) malloc(sizeof(QUEUE));
-    initQueue(q);
-    char linha[MAX], comando[MAX];
-    int num;
-    int over = 1;
+int recria(QUEUE *q) {
+    int i;
+    int *nValues = malloc((2 * q->size) * sizeof(int));
+    q->valores = realloc(q, (2 * q->size) * sizeof(int));
 
-    do {
-        printf("Comando: ");
-        fgets(linha, MAX, stdin);
-        if (sscanf(linha, "%s", comando) == 1) {
-            if (!strcmp(comando, "empty")) {
-                printf("Empty? ");
-                printf((isEmpty(q) == 0) ? "Sim" : "Não");
+    if (nValues == NULL) return -1;
 
-            } else if (!strcmp(comando, "enqueue") && sscanf(linha, "%s %d", comando, &num) == 2) {
-                if (!enqueue(q, num))
-                    printf("Adicionado com sucesso.");
-                else
-                    printf("Erro ao adicionar o valor.");
+    for (i = q->inicio; i < q->tamanho; i++) {
+        nValues[i] = q->valores[(q->inicio + i) % q->size];
+    }
 
-            } else if (!strcmp(comando, "dequeue")) {
-                if (!dequeue(q, &num))
-                    printf("Removido o número %d.", num);
-                else
-                    printf("Erro ao remover o número.");
-
-            } else if (!strcmp(comando, "front")) {
-                if (!front(q, &num))
-                    printf("O número no início da queue é %d.", num);
-                else
-                    printf("Erro ao retirar o último elemento da queue.");
-
-            } else if (!strcmp(comando, "sair")) over = 0;
-            putchar('\n');
-        }
-    } while(over);
+    q->size *= 2;
+    q->inicio = 0;
+    q->valores = nValues;
     return 0;
 }
 
 void initQueue(QUEUE *q) {
+    q->size = 5;
     q->inicio = 0;
+    q->valores = malloc(5*sizeof(int));
     q->tamanho = 0;
-    q->valores = malloc(q->tamanho * sizeof(int));
 }
 
-int isEmpty(QUEUE *q) {
-    return q->inicio;
+int isEmptyQ(QUEUE *q) {
+    return !(q->tamanho);
 }
 
 int enqueue(QUEUE *q, int x) {
-    int r = 0;
+    if (q->tamanho == q->size) {
+        int e = recria(q);
+        if (e == -1)
+            return -1;
+    }
 
-    reallocate(q);
-    q->valores[q->inicio++] = x;
-    return r;
+    q->valores[(q->tamanho + q->inicio) % q->size] = x;
+    q->tamanho++;
+
+    return 0;
 }
 
 int dequeue(QUEUE *q, int *x) {
-    int r = 0;
-    if (q->inicio == 0)
-        r = 1;
-    else {
-        q->inicio--;
+    if (q->tamanho >= 0) {
         *x = q->valores[q->inicio];
-        reallocate2(q);
+        q->inicio = q->inicio+1 % q->size;
+        q->tamanho--;
+        return 0;
     }
-    return r;
+
+    return -1;
 }
 
 int front(QUEUE *q, int *x) {
-    int r = 0;
-    if (q->inicio == 0)
-        r = 1;
-    else {
-        *x = q->valores[q->inicio - 1];
+    if (q->tamanho >= 0) {
+        *x = q->valores[q->inicio];
+        return 0;
     }
-    return r;
+
+    return -1;
 }
 
-void reallocate(QUEUE *q) {
-    int v[q->inicio];
-    for (int i = 0; i < q->inicio; i++)
-        v[i] = q->valores[i];
-    free(q->valores);
-    q->tamanho++;
-    q->valores = malloc(q->tamanho * sizeof(int));
-    for (int i = 0; i < q->inicio; i++)
-        q->valores[i] = v[i];
-}
-
-void reallocate2(QUEUE *q) {
-    int v[q->inicio];
-    for (int i = 0; i < q->inicio; i++)
-        v[i] = q->valores[i];
-    free(q->valores);
-    q->tamanho--;
-    q->valores = malloc(q->tamanho * sizeof(int));
-    for (int i = 0; i < q->inicio; i++)
-        q->valores[i] = v[i];
+int main() {
+    QUEUE q2;
+    QUEUE *q = &q2;
+    int x;
+    initQueue(q);
+    for (int i = 1; i <= 3; i++)
+        enqueue(q,i);
+    dequeue(q, &x);
+    front(q, &x);
 }
