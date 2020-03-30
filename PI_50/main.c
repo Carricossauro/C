@@ -5,6 +5,7 @@
 int main() {
     int exercicio, resultado, arr[10] = {1,12,13,14,20}, ve[10] = {2,15,16,17,18}, r[10];
     int neg[5] = {1, -2, 0, 3, -5}, rep[10] = {1, 2, 3, 2, 1, 4, 2, 4, 5, 4};
+    float m[3][3] = {{0,1,2},{0,0,3},{0,0,0}}, t[3][3];
     unsigned int a;
     char s1[50], s2[50], *res;
     printf("Exercício: ");
@@ -205,6 +206,18 @@ int main() {
             exercicio = ex34(rep, 10);
             printf("%d\n", exercicio);
             for (int i = 0; i < exercicio; i++) printf("%d ", rep[i]);
+            break;
+        case 39:
+            exercicio = ex39(3, m);
+            printf("%d", exercicio);
+            break;
+        case 40:
+            ex40(3, m, t);
+            for (int i = 0; i < 3; i++) {
+                for (int k = 0; k < 3; k++)
+                    printf("%f ", t[i][k]);
+                putchar('\n');
+            }
             break;
     }
     return 0;

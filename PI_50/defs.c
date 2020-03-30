@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <math.h>
 
 int ex1() {
     int n, maior;
@@ -497,4 +498,172 @@ int ex36(int a[], int na, int b[], int nb) {
         }
     }
     return reps;
+}
+
+int ex37(int v[], int n) {
+    int r = 0;
+    for (int i = 1; i < n; i++) {
+        if (v[i] < v[r])
+            r = i;
+    }
+    return r;
+}
+
+void ex38(int v[], int ac[], int n) {
+    int r = 0;
+    for (int i = 0; i < n; i++) {
+        ac[i] = v[i] + r;
+        r = ac[i];
+    }
+}
+
+int ex39(int n, float m[n][n]) {
+    int i, r = 1, o;
+    for (i = 0; i < n; i++) {
+        for (o = 0; o <= i; o++)
+            if (m[i][o] != 0)
+                r = 0;
+    }
+    return r;
+}
+
+void ex40(int n, float m[n][n], float t[n][n]) {
+    for (int i = 0; i < n; i++) {
+        for(int k = 0; k < n; k++)
+            t[k][i] = m[i][k];
+    }
+}
+
+void ex41(int n, int m, int a[n][m], int b[n][m]) {
+    for (int i = 0; i < n; i++) {
+        for (int k = 0; k < m; k++)
+            a[i][k] += b[i][k];
+    }
+}
+
+int ex42(int n, int v1[n], int v2[n], int r[n]) {
+    int i;
+    for (i = 0; i < n; i++)
+        if (v1[i] == 1 || v2[i] == 1)
+            r[i] = 1;
+        else r[i] = 0;
+
+    return i;
+}
+
+int ex43(int n, int v1[n], int v2[n], int r[n]) {
+    int i;
+    for (i = 0; i < n; i++)
+        if (v1[i] == 1 && v2[i] == 1)
+            r[i] = 1;
+        else r[i] = 0;
+
+    return i;
+}
+
+int ex44(int n, int v1[n], int v2[n], int r[n]) {
+    int i;
+    for (i = 0; i < n; i++)
+        if (v1[i] != 0 && v2[i] != 0)
+            r[i] = (v1[i] < v2[i]) ? v1[i] : v2[i];
+        else r[i] = 0;
+    return i;
+}
+
+int ex45(int n, int v1[n], int v2[n], int r[n]) {
+    int i;
+    for (i = 0; i < n; i++)
+        if (v1[i] != 0 || v2[i] != 0)
+            r[i] = (v1[i] > v2[i]) ? v1[i] : v2[i];
+        else r[i] = 0;
+    return i;
+}
+
+int ex46(int n, int v[n]) {
+    int i, r;
+    for (i = 0, r = 0; i < n; i++)
+        r+=v[i];
+    return r;
+}
+
+typedef enum movimento {Norte, Oeste, Sul, Este} Movimento;
+typedef struct posicao {
+    int x, y;
+} Posicao;
+
+Posicao ex47(Posicao inicial, Movimento mov[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        if (mov[i] == Norte)
+            inicial.y++;
+        else if (mov[i] == Este)
+            inicial.x++;
+        else if (mov[i] == Sul)
+            inicial.y--;
+        else if (mov[i] == Oeste)
+            inicial.x--;
+    }
+    return inicial;
+}
+
+int ex48(Posicao inicial, Posicao final, Movimento mov[], int n) {
+    int r = 0, i, mx = 0, my = 0;
+    if (abs(final.x - inicial.x) + abs(final.y - inicial.y) <= n) {
+        mx = (final.x - inicial.x) > 0;
+        my = (final.y - inicial.y) > 0;
+
+        while (final.x != inicial.x) {
+            if (mx) {
+                mov[r++] = Este;
+                inicial.x++;
+            } else {
+                mov[r++] = Oeste;
+                inicial.x--;
+            }
+        }
+        while (final.y != inicial.y) {
+            if (my) {
+                mov[r++] = Norte;
+                inicial.y++;
+            } else {
+                mov[r++] = Sul;
+                inicial.y--;
+            }
+        }
+
+        return r;
+    } else return -1;
+}
+
+double distancia(Posicao pos, Posicao origem) {
+    double r = 0;
+    double dx = pos.x - origem.x;
+    double dy = pos.y - origem.y;
+    r = sqrt(pow(dx, 2) + pow(dy, 2));
+    return r;
+}
+
+int ex49(Posicao pos[], int n) {
+    Posicao origem;
+    origem.x = 0;
+    origem.y = 0;
+    int i, r = -1;
+    if (n > 1) {
+        r = 0;
+        for (i = 1; i < n; i++){
+            if (distancia(pos[i], origem) < distancia(pos[r], origem))
+                r = i;
+        }
+    }
+    return r;
+}
+
+int ex50(Posicao p, Posicao pos[], int n) {
+    int r = 0;
+    for (int i = 0; i < n; i++) {
+        if (distancia(p, pos[i]) == 1)
+            r++;
+    }
+
+    return r;
 }

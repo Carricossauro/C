@@ -35,6 +35,7 @@ int ex31(int v[], int n);
 int ex32(int v[], int n);
 int ex33(int v[], int n);
 int ex34(int v[], int n);
-int ex35(int a[], int na, int b[], int nb);
+int ex39(int n, float m[n][n]);
+void ex40(int n, float m[n][n], float t[n][n]);
 
 #endif //PI_50_DEFS_H
