@@ -167,32 +167,105 @@ void ex8(LInt l, int x, LInt *mx, LInt *Mx) {
 }
 
 LInt ex9(LInt *l) {
-    LInt t = *l, n = NULL;
-    int x = 0;
+    LInt t = *l, n = *l;
+    int x = 0, i;
     while (t != NULL) {
         x++;
         t = t->prox;
     }
-    t = *l;
-    x /= 2;
-    while (x > 0) {
-        x--;
-        n = t;
-        t = t->prox;
+    if (x == 1) {
+        n = NULL;
+    } else {
+        x /= 2;
+        t = *l;
+        for (i = 1; i < x; i++){
+            t = t->prox;
+        }
+        *l = t->prox;
+        t->prox = NULL;
     }
-    if (n != NULL) {
-        n->prox = NULL;
-    }
-    return t;
+    return n;
 }
 
+int ex10(LInt *l, int x) {
+    int y = 0;
+    LInt t, n = *l; //t percorre a lista, n guarda o ponto inicial
+    while (n != NULL && n->valor == x) {
+        n = n->prox;
+        y++;
+    }
+    t = n;
+    while (t != NULL && t->prox != NULL) {
+        if (t->prox->valor == x) {
+            LInt p = t->prox->prox;
+            free(t->prox);
+            t->prox = p;
+            y++;
+        } else {
+            t = t->prox;
+        }
+    }
+    *l = n;
+    return y;
+}
 
+int ex11(LInt *l){
+    int y = 0, x;
+    LInt t, n;
+    t = *l;
+    while (t != NULL) {
+        x = t->valor;
+        n = t;
+        while (n != NULL && n->prox != NULL) {
+            if (n->prox->valor == x) {
+                LInt p = n->prox->prox;
+                free(n->prox);
+                n->prox = p;
+                y++;
+            } else
+                n = n->prox;
+        }
+        t = t->prox;
+    }
+    return y;
+}
 
+int ex12(LInt *l){
+    int m = (*l)->valor;
+    LInt n = *l, t = *l, an = NULL;
 
+    while (t != NULL) {
+        if (t -> prox != NULL && t->prox->valor > m) {
+            m = t->prox->valor;
+            n = t->prox;
+            an = t;
+        }
+        t = t->prox;
+    }
+    if (an == NULL)
+        *l = n->prox;
+    else {
+        t = n->prox;
+        free(n);
+        an->prox = t;
+    }
 
+    return m;
+}
 
-
-
+void ex13(LInt *l){
+    if ((*l)->prox == NULL) {
+        *l = NULL;
+    } else {
+        LInt n, t = *l;
+        while (t->prox != NULL) {
+            n = t;
+            t = t->prox;
+        }
+        free(t);
+        n->prox = NULL;
+    }
+}
 
 
 
