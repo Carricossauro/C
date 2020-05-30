@@ -84,6 +84,9 @@
 		<Unit filename="/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/ex2.c">
 			<Option target="PI_F9"/>
 		</Unit>
+		<Unit filename="/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/ex3.c">
+			<Option target="PI_F9"/>
+		</Unit>
 		<Unit filename="/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

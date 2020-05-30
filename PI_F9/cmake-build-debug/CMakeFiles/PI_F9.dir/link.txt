@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/PI_F9.dir/ex1.c.o CMakeFiles/PI_F9.dir/ex2.c.o  -o PI_F9 
+/usr/bin/cc -g   CMakeFiles/PI_F9.dir/ex1.c.o CMakeFiles/PI_F9.dir/ex2.c.o CMakeFiles/PI_F9.dir/ex3.c.o  -o PI_F9 

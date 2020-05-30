@@ -267,10 +267,210 @@ void ex13(LInt *l){
     }
 }
 
+void ex14(LInt *l, int x) {
+    LInt t = *l, ant;
+    while (t != NULL) {
+        ant = t;
+        t = t->prox;
+    }
+    LInt n = malloc(sizeof(struct lligada));
+    n->valor = x;
+    n->prox = NULL;
+    if (*l == NULL) *l = n;
+    else ant->prox = n;
+}
 
+void ex15(LInt *a, LInt b) {
+    LInt la = *a;
+    if (la != NULL) {
+        while (la->prox != NULL) la = la->prox;
+        la->prox = b;
+    } else *a = b;
+}
 
+LInt ex16(LInt a) {
+    LInt inicio = NULL;
+    if (a != NULL) {
+        LInt l = malloc(sizeof(struct lligada));
+        l->valor = a->valor;
+        l->prox = NULL;
+        inicio = l;
+        a = a->prox;
+    }
+    while (a != NULL) {
+        LInt t = malloc(sizeof(struct lligada));
+        t->valor = a->valor;
+        t->prox = NULL;
+        l->prox = t;
+        l = l->prox;
+        a = a->prox;
+    }
+    return inicio;
+}
 
+LInt ex17(LInt a){
+    LInt l = NULL;
+    while (a != NULL) {
+        LInt t = malloc(sizeof(struct lligada));
+        t->valor = a->valor;
+        t->prox = l;
+        l = t;
+        a = a->prox;
+    }
+    return l;
+}
 
+int ex18(LInt l){
+    int x = l->valor;
+    l = l->prox;
+    while (l != NULL) {
+        if (l->valor > x) x = l->valor;
+        l = l->prox;
+    }
+    return x;
+}
 
+int ex19(int n, LInt *a){
+    LInt l = *a;
+    int r = 0;
+    while (n != 1 && l != NULL && l->prox != NULL) {
+        l = l->prox;
+        r++;
+        n--;
+    }
+    if (l != NULL) {
+        l->prox = NULL;
+        r++;
+    }
+    return r;
+}
 
+int ex20(int n, LInt *l){
+    LInt ant;
+    int r = 0;
+    while (n > 0 && *l != NULL) {
+        ant = *l;
+        *l = (*l)->prox;
+        free(ant);
+        r++;
+        n--;
+    }
+    return r;
+}
 
+LInt ex21(LInt l, int n) {
+    while (n > 0) {
+        l = l->prox;
+        n--;
+    }
+    return l;
+}
+
+int ex22(LInt l, int v[], int n){
+    int i;
+    for(i = 0; i < n && l != NULL; i++, l = l->prox) {
+        v[i] = l->valor;
+    }
+    return i;
+}
+
+LInt ex23(int v[], int n){
+    int i;
+    LInt l, ant = NULL, inicio = NULL;
+    for (i = 0; i < n; i++) {
+        l = malloc(sizeof(struct lligada));
+        l->valor = v[i];
+        l->prox = NULL;
+        if (ant != NULL)
+            ant->prox = l;
+        ant = l;
+        if (inicio == NULL) inicio = l;
+    }
+    return inicio;
+}
+
+LInt ex24(LInt a) {
+    LInt l, inicio = NULL;
+    int total = 0;
+    if (a != NULL) {
+        l = malloc(sizeof(struct lligada));
+        total += a->valor;
+        l->valor = total;
+        l->prox = NULL;
+        inicio = l;
+        a = a->prox;
+    }
+    while (a != NULL) {
+        LInt t = malloc(sizeof(struct lligada));
+        total += a->valor;
+        t->valor = total;
+        t->prox = NULL;
+        l->prox = t;
+        l = t;
+        a = a->prox;
+    }
+    return inicio;
+}
+
+void ex25(LInt l){
+    while (l != NULL) {
+        LInt ant, a = l->prox;
+        ant = l;
+        while (a != NULL) {
+            if (a->valor == l->valor) {
+                ant->prox = a->prox;
+                free(a);
+                a = ant->prox;
+            } else {
+                ant = a;
+                a = a->prox;
+            }
+        }
+        l = l->prox;
+    }
+}
+
+LInt ex26(LInt l){
+    if (l != NULL && l->prox != NULL) {
+        LInt a = l;
+        while (a->prox != NULL) {
+            a = a->prox;
+        }
+        a->prox = l;
+        l = l->prox;
+        a->prox->prox = NULL;
+    }
+    return l;
+}
+
+LInt ex27(LInt l){
+    int n = 1;
+    LInt ant, i, inicio = NULL;
+    if (l != NULL) {
+        ant = l;
+        l = l->prox;
+        ant->prox = NULL;
+    }
+    if (l != NULL) {
+        i = l;
+        l = l->prox;
+        i->prox = NULL;
+        inicio = i;
+    }
+    while (l != NULL) {
+        if (n % 2 == 0) {
+            i->prox = l;
+            l = l->prox;
+            i = i->prox;
+            i->prox = NULL;
+        } else {
+            ant->prox = l;
+            l = l->prox;
+            ant = ant->prox;
+            ant->prox = NULL;
+        }
+        n++;
+    }
+
+    return inicio;
+}

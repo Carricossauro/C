@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/ex1.c" "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/cmake-build-debug/CMakeFiles/PI_F9.dir/ex1.c.o"
   "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/ex2.c" "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/cmake-build-debug/CMakeFiles/PI_F9.dir/ex2.c.o"
+  "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/ex3.c" "/home/carricossauro/Desktop/LCC 1ºano 2ºsemestre/C/PI_F9/cmake-build-debug/CMakeFiles/PI_F9.dir/ex3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
