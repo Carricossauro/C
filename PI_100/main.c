@@ -474,3 +474,158 @@ LInt ex27(LInt l){
 
     return inicio;
 }
+
+int ex28(ABin a){
+    int r = 0;
+    if (a != NULL) {
+        int esq = ex28(a->esq);
+        int dir = ex28(a->dir);
+        int x = (esq > dir) ? esq : dir;
+        r = 1 + x;
+    }
+
+    return r;
+}
+
+ABin ex29(ABin a) {
+    ABin b = NULL;
+    if (a != NULL) {
+        b = malloc(sizeof(struct nodo));
+        b->valor = a->valor;
+        b->esq = ex29(a->esq);
+        b->dir = ex29(a->dir);
+    }
+    return b;
+}
+
+void ex30(ABin *a) {
+    if (*a != NULL) {
+        ABin esq, dir;
+        esq = (*a)->esq;
+        dir = (*a)->dir;
+        ex30(&esq);
+        ex30(&dir);
+        (*a)->esq = dir;
+        (*a)->dir = esq;
+    }
+}
+
+void ex31(ABin a, LInt *l) {
+    LInt b = NULL;
+    if (a != NULL) {
+        b = malloc(sizeof(struct lligada));
+        b->valor = a->valor;
+        LInt at, dp;
+        ex31(a->esq, &at);
+        ex31(a->dir, &dp);
+        b->prox = dp;
+        if (at != NULL) {
+            LInt m = at;
+            while (m->prox != NULL)
+                m = m->prox;
+            m->prox = b;
+            b = at;
+        }
+    }
+    *l = b;
+}
+
+void ex32(ABin a, LInt *l) {
+    LInt b = NULL;
+    *l = NULL;
+    if (a != NULL) {
+        b = malloc(sizeof(struct lligada));
+        *l = b;
+        b->valor = a->valor;
+        ex32(a->esq, &(b->prox));
+        while(b->prox != NULL) {
+            b = b->prox;
+        }
+        ex32(a->dir, &(b->prox));
+    }
+}
+
+void ex33(ABin a, LInt *l) {
+    LInt b = NULL;
+    *l = NULL;
+    if (a != NULL) {
+        b = malloc(sizeof(struct lligada));
+        b->valor = a->valor;
+        b->prox = NULL;
+        LInt es = NULL, dir = NULL;
+        ex33(a->esq, &es);
+        ex33(a->dir, &dir);
+        if (es != NULL) {
+            *l = es;
+            while (es->prox != NULL) {
+                es = es->prox;
+            }
+        }
+        if (dir != NULL) {
+            if (*l == NULL) {
+                *l = dir;
+            } else {
+                es->prox = dir;
+            }
+            while(dir->prox != NULL)
+                dir = dir->prox;
+            dir->prox = b;
+        } else if (es != NULL) es->prox = b;
+        if (*l == NULL) *l = b;
+    }
+}
+
+int ex34(ABin a, int x) {
+    int r = -1;
+
+    if (a != NULL) {
+        if (a->valor == x) r = 1;
+        else {
+            int es = ex34(a->esq, x);
+            int di = ex34(a->dir, x);
+
+            if (es != -1) r = 1 + es;
+            if (di != -1) r = (es != -1 && es < di) ? 1 + es : 1 + di;
+        }
+    }
+
+    return r;
+}
+
+int ex35(ABin a) {
+    int r = 0;
+
+    if (a != NULL) {
+        r++;
+        int es = ex35(a->esq);
+        int di = ex35(a->dir);
+        free(a);
+        r+=es;
+        r+=di;
+    }
+
+    return r;
+}
+
+int ex36(ABin *a, int l) {
+    int r = 0;
+    if (*a != NULL) {
+        ABin esq, dir;
+        esq = (*a)->esq;
+        dir = (*a)->dir;
+        if (l == 1) {
+            (*a)->esq = NULL;
+            (*a)->dir = NULL;
+        }
+        if (l == 0) {
+            r++;
+            free(*a);
+            *a = NULL;
+            l = 1;
+        }
+        r += ex36(&esq, l-1);
+        r += ex36(&dir, l-1);
+    }
+    return r;
+}
+
