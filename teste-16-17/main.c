@@ -113,7 +113,7 @@ int push(StackC *s, int x) {
     CList p = t.valores;
     if (t.sp == MAXc) {
         t.sp = 1;
-        CList tmp = malloc(sizeof(int) * MAXc);
+        CList tmp = malloc(sizeof(struct chunk));
         tmp->vs[0] = x;
         tmp->prox = p;
         p = tmp;
