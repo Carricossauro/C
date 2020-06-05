@@ -118,7 +118,7 @@ int push(StackC *s, int x) {
         tmp->prox = p;
         t->valores = tmp;
     } else {
-        p->vs[t.sp-1] = x;
+        p->vs[t.sp] = x;
         t.sp++;
     }
     return 0;
@@ -127,13 +127,16 @@ int push(StackC *s, int x) {
 int pop(StackC *s, int x) {
     StackC t = *s;
     CList p = t.valores;
-    if (t.sp == 1) {
-        CList tmp = p->prox;
+    if (t.sp != 0) {
+      if (t.sp == 1) {
+         CList tmp = p->prox;
         free(p);
         t.sp = MAXc;
-        p = tmp;
-    } else t.sp--;
-    return 0;
+        t.valores = tmp;
+      } else t.sp--;
+      return 0;
+    }
+    return 1;
 }
 
 int size(StackC s) {
@@ -143,7 +146,7 @@ int size(StackC s) {
         r++;
         t = t->prox;
     }
-    return r + s.sp;
+    return MAXc * r + s.sp;
 }
 
 //Vou na fé que nao saia lol
