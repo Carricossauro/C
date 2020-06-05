@@ -130,7 +130,7 @@ int pop(StackC *s, int x) {
     if (t.sp == 1) {
         CList tmp = p->prox;
         free(p);
-        t.sp = 3;
+        t.sp = MAXc;
         p = tmp;
     } else t.sp--;
     return 0;
