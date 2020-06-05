@@ -110,13 +110,13 @@ typedef struct stackC {
 
 int push(StackC *s, int x) {
     StackC t = *s;
-    CList p = t.valores;
+    CList p = t->valores;
     if (t.sp == MAXc) {
         t.sp = 1;
         CList tmp = malloc(sizeof(struct chunk));
         tmp->vs[0] = x;
         tmp->prox = p;
-        p = tmp;
+        t->valores = tmp;
     } else {
         p->vs[t.sp-1] = x;
         t.sp++;
